@@ -1,0 +1,24 @@
+.features {
+  @include background;
+  background-image: url("../../img/Rectangle.jpg");
+  background-color: $background-color-grey;
+}
+
+.features__wrapper {
+  background-color: $background-color-white;
+}
+
+.features__title {
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  color: $color-subtitle;
+  letter-spacing: 0.04em;
+}
+
+.features__description {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+}
