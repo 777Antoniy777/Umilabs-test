@@ -69,8 +69,9 @@ body {
 }
 
 .site-wrapper {
-  // width: 85%;
-  width: 310px;
+  width: 85%;
+  max-width: 530px;
+  // width: 300px;
   margin: 0 auto;
   padding: 0;
 }
@@ -78,8 +79,9 @@ body {
 @media (min-width: $tablet-width) {
   .site-wrapper {
     // width: 85%;
-    width: 972px;
-    margin: 0 auto;
-    padding: 0;
+    // width: 972px;
+    max-width: 880px;
+    // margin: 0 auto;
+    // padding: 0;
   }
 }

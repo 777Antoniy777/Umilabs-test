@@ -1,10 +1,19 @@
 .development__title {
-  font-size: 48px;
-  line-height: 60px;
+  font-size: $body-font-size + 20px;
+  line-height: $body-line-height + 20px;
+  text-align: center;
   letter-spacing: -0.02em;
 }
 
 .development__description {
   font-family: "Roboto", "Arial", sans-serif;
-  color: #4e4d53;
+  color: $color-description;
 }
+
+@media (min-width: $tablet-width) {
+  .development__title {
+    font-size: $body-font-size + 32px;
+    line-height: $body-line-height + 34px;
+  }
+}
+
