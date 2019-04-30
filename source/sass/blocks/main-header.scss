@@ -1,13 +1,13 @@
 .main-header {
   text-align: center;
-  min-height: 300px;
+  min-height: 260px;
 }
 
 .main-header__title {
   font-size: $body-font-size + 20px;
   line-height: $body-line-height + 20px;
   font-weight: $font-normal;
-  padding: 0 40px;
+  margin-top: 50px;
   letter-spacing: -0.02em;
 }
 
