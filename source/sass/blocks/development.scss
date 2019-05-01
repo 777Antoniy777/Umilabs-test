@@ -11,9 +11,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .development {
+    max-width: 773px;
+    margin-bottom: 106px;
+  }
+
   .development__title {
     font-size: $body-font-size + 32px;
     line-height: $body-line-height + 34px;
+    text-align: left;
+    margin: 78px 0 22px;
+  }
+
+  .development__description {
+    margin-bottom: 29px;
   }
 }
 

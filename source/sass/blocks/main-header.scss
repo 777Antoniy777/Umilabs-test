@@ -30,6 +30,14 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
 
+  &:hover {
+    color: $color-subtitle;
+  }
+
+  &:active {
+    color: rgba($color-subtitle, 0.7);
+  }
+
   &::before {
     @include pseudo;
     top: 2px;
@@ -38,20 +46,36 @@
     width: 14px;
     height: 14px;
   }
+
+  &:hover::before {
+    transform: rotate(180deg);
+    transition: 2s;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .main-header {
+    padding-top: 117px;
+    margin-bottom: 103px;
+  }
+
   .main-header__title {
     font-size: $body-font-size + 32px;
     line-height: $body-line-height + 28px;
+    margin-bottom: 19px;
+  }
+
+  .main-header__description {
+    margin: 5px 0 48px;
   }
 
   .main-header__link {
     line-height: $body-line-height - 6px;
+    margin-left: 53px;
 
     &::before {
       top: 2px;
-      left: -20px;
+      left: -27px;
     }
   }
 }

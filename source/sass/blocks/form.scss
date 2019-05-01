@@ -92,6 +92,18 @@
   color: rgba($background-color-white, 0.3);
 }
 
+/* stylelint-disable */
+_:-ms-fullscreen, :root .form__wrapper input {
+  color: $background-color-white;
+}
+/* stylelint-enable */
+
+/* stylelint-disable */
+:-ms-fullscreen, :root .form__wrapper input:-ms-input-placeholder {
+  color: rgba($background-color-white, 0.3);
+}
+/* stylelint-enable */
+
 .form__button {
   @include flex;
   justify-content: center;
@@ -102,34 +114,99 @@
   text-transform: uppercase;
   min-width: 200px;
   min-height: 54px;
+  padding: 5px 20px;
   margin: 10px auto 30px;
-  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 111px;
   color: $color-subtitle;
   background-color: $background-color-white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-  border-radius: 111px;
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
+  word-break: break-all;
+  cursor: pointer;
+
+  &:hover {
+    color: $background-color-white;
+    background-color: $button-hover;
+  }
+
+  &:active {
+    color: $background-color-white;
+    background-color: $button-active;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .form {
+    padding-bottom: 90px;
+  }
+
+  .form .site-wrapper {
+    max-width: 667px;
+  }
+
+  .form__wrapper {
+    position: relative;
+    left: -48px;
+  }
+
+  .form__inner-wrapper {
+    padding-left: 94px;
+  }
+
   .form__title {
     font-size: $body-font-size + 24px;
     line-height: $body-line-height + 26px;
+    margin: 68px 0 51px;
   }
 
   .form__wrapper label {
     line-height: $body-line-height - 1px;
+    margin-bottom: 8px;
+
+    &::before {
+      top: -19px;
+      left: -93px;
+    }
   }
 
   .form__wrapper input,
   .form__wrapper textarea {
     font-size: $body-font-size + 8px;
     line-height: $body-line-height + 9px;
+    padding-left: 0;
+    padding-bottom: 17px;
+    margin-bottom: 67px;
   }
+
+  .form__wrapper textarea {
+    min-height: 100px;
+    margin-bottom: 44px;
+  }
+
+  /* stylelint-disable */
+  :-ms-fullscreen, :root .form__wrapper textarea {
+    min-height: 110px;
+  }
+  /* stylelint-enable */
 
   .form__button {
     font-size: $body-font-size - 2px;
     line-height: $body-line-height - 9px;
-    min-width: 200px;
-    min-height: 54px;
+    width: 100%;
+    min-height: 53px;
   }
+}
+
+@media (min-width: $tablet-width) and (max-width: 710px) {
+  .form__wrapper textarea {
+    min-height: 130px;
+  }
+
+  /* stylelint-disable */
+  :-ms-fullscreen, :root .form__wrapper textarea {
+    min-height: 140px;
+  }
+  /* stylelint-enable */
 }

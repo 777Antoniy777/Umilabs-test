@@ -1,7 +1,7 @@
 .features {
   background-image: url("../img/Rectangle.jpg");
   background-position: top;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-color: $background-color-grey;
   min-height: 765px;
   padding-top: 100px;
@@ -33,13 +33,36 @@
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    min-height: 450px;
+    padding: 501px 0 80px;
+  }
+
+  .features__wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    border: 0.5px solid #ededed;
+  }
+
+  .features__inner-wrapper {
+    text-align: left;
+    width: 50%;
+    max-width: 486px;
+    min-height: 232px;
+    border: 0.5px solid #ededed;
+    padding: 35px 73px 0 60px;
+    box-sizing: border-box;
+  }
+
   .features__title {
     font-size: $body-font-size - 4px;
     line-height: $body-line-height - 7px;
+    margin-bottom: 0;
   }
 
   .features__description {
     font-size: $body-font-size + 8px;
     line-height: $body-line-height + 4px;
+    margin-top: 14px;
   }
 }
