@@ -44,7 +44,7 @@
             <h3 class="features__title">Используем лучшее</h3>
             <p class="features__description">Вы способны применять разные подходы для достижения своих целей?</p>
           </div>
-            <div class="features__inner-wrapper">
+          <div class="features__inner-wrapper">
             <h3 class="features__title">Относимся с пониманием</h3>
             <p class="features__description">Вы не обвиняете других<br> в свои неудачах и способны воспринимать критику?</p>
           </div>
@@ -84,19 +84,24 @@
           <form class="form__wrapper" action="https://echo.htmlacademy.ru" method="POST">
             <div class="form__inner-wrapper">
               <label for="name">Фамилия и имя</label>
-              <input type="text" id="name" name="name" placeholder="Сидоров Александр">
+              <input type="text" id="name" name="name" placeholder="Сидоров Александр" required>
               <label for="email">Электронная почта</label>
-              <input type="email" id="email" name="email" placeholder="Sidorov@yandex.ru">
+              <input type="email" id="email" name="email" placeholder="Sidorov@yandex.ru" required>
               <label for="phone">Телефон</label>
-              <input type="tel" id="phone" name="phone" placeholder="+7 (999)-328-14-20">
+              <input type="tel" id="phone" name="phone" placeholder="+7 (999)-328-14-20" required>
               <label for="work">Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?</label>
-              <textarea id="work" name="work" placeholder="Свой проект по созданию универсальной инфраструктуры строительства"></textarea>
-            <button class="form__button" type="submit">Отправить</button>
+              <textarea id="work" name="work" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" required></textarea>
+              <button class="form__button" type="submit">Отправить</button>
             </div>
           </form>
         </div>
       </div>
     </main>
+    <template id="popup-message">
+      <div class="popup">
+        <p class="popup-description">Текст сообщения</p>
+      </div>
+    </template>
     <script src='js/all.min.js'></script>
   </body>
 </html>

@@ -5,6 +5,11 @@
   background-color: $background-color-grey;
   min-height: 765px;
   padding-top: 100px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/Rectangle@2x.jpg");
+    background-size: 1440px 600px;
+  }
 }
 
 .features__wrapper {

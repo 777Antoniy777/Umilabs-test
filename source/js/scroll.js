@@ -4,14 +4,14 @@
   // высота окна
   var HEIGHT_WINDOW = document.documentElement.clientHeight / 2;
 
-  var scrollButton = document.querySelector('.offers__add-button');
-  var news = document.querySelector('.news');
+  var scrollLink = document.querySelector('.main-header__link');
+  var form = document.querySelector('.form');
 
   // функция скролла до след. блока
   var scrollButtonClickHandler = function () {
-    scrollButton.addEventListener('click', function (evt) {
-      var isCoord = news.getBoundingClientRect().top + (news.getBoundingClientRect().height / 2) > HEIGHT_WINDOW;
-      var coord = news.getBoundingClientRect().top + (news.getBoundingClientRect().height / 2) + pageYOffset - HEIGHT_WINDOW;
+    scrollLink .addEventListener('click', function (evt) {
+      var isCoord = form.getBoundingClientRect().top + (form.getBoundingClientRect().height / 2) > HEIGHT_WINDOW;
+      var coord = form.getBoundingClientRect().top + (form.getBoundingClientRect().height / 2) + pageYOffset - HEIGHT_WINDOW;
       evt.preventDefault();
 
       if (isCoord) {
